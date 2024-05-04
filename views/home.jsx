@@ -1,16 +1,17 @@
-const React = require('react');
-// ./default is a cue to look in the local file system to find the resource versus an npm dependency as it does when we require ('react')
-const Def = require('./default')
+const React = require("react");
+// Default template page
+const Def = require("./default");
 
-function home () {
-    return (
-      <Def>
-          <main>
-              <h1>HOME</h1>
-          </main>
-      </Def>
-    )
-  }
-  
+//Create home page using default page
+function home() {
+  return (
+    <Def>
+      <main>
+        <h1>HOME</h1>
+      </main>
+    </Def>
+  );
+}
 
+// See index.js
 module.exports = home;

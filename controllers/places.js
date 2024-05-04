@@ -15,7 +15,9 @@ router.get('/', (req, res) => {
         pic: 'https://github.com/JesusMLares/Rest-Rant/blob/main/img/kitten2.jpg?raw=true'
       }]
       
+      // Render index.jsx and passes 'places' objects
     res.render('places/index', {places})
 })
 
+// See index.js
 module.exports = router
