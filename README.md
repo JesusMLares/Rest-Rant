@@ -2,6 +2,9 @@
 
 REST-Rant is an app where users can review restaurants.
 
+## Open web page
+http://localhost:3000
+
 ## Routes Table
 | METHOD |           PATH           |                     PURPOSE                      |
 |:------:|:------------------------:|:------------------------------------------------:|
