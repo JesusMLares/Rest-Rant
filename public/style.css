@@ -1,5 +1,32 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+main{
+    width: 60vw;
+}
+
+div{
+    width: 100%;
+}
+
 h1 {
+    align-self: center;
     text-align: center;
     color: cornflowerblue;
   }
+
+h2{
+    color: red;
+}
+
+
+
   
+img{
+    display: block;
+    width: 20vw;
+    height: 20vh;
+}
