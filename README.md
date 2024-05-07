@@ -1,5 +1,8 @@
 # Project REST-Rant
 
+## Activity 3 Branch
+This version is meant to show the completed result of activity 3 of Rest Rant.
+
 REST-Rant is an app where users can review restaurants.
 
 ## Open web page
