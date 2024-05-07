@@ -1,5 +1,25 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
 h1 {
     text-align: center;
     color: cornflowerblue;
   }
+
+div{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
   
+img{
+    display: block;
+    margin: 0 auto;
+    width: 60vw;
+    height: 60vh;
+}
