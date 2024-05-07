@@ -4,22 +4,29 @@ body{
     margin: 0 auto;
 }
 
+main{
+    width: 60vw;
+}
+
+div{
+    width: 100%;
+}
+
 h1 {
+    align-self: center;
     text-align: center;
     color: cornflowerblue;
   }
 
-div{
-    text-align: center;
+h2{
+    color: red;
 }
 
-p{
-    text-align: center;
-}
+
+
   
 img{
     display: block;
-    margin: 0 auto;
-    width: 60vw;
-    height: 60vh;
+    width: 20vw;
+    height: 20vh;
 }

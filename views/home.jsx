@@ -7,7 +7,7 @@ function home() {
   return (
     <Def>
       <main>
-        <h1>HOME</h1>
+        <h1>REST-rant</h1>
         <img src="/images/pink.jpg" alt="pink beverage by Alex Lvrs" />
         <div>
           Photo by <a href="https://unsplash.com/photos/pink-beverage-on-glass-with-blackberries-and-pink-flower-on-top-sBDJADrnsbY">Alex Lvrs</a>
