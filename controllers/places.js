@@ -13,6 +13,12 @@ router.get('/', (req, res) => {
         state: 'AZ',
         cuisines: 'Coffee, Bakery',
         pic: 'https://github.com/JesusMLares/Rest-Rant/blob/main/img/kitten2.jpg?raw=true'
+      }, {
+        name: 'Coding Cat Cafe ^2',
+        city: 'Phoenix',
+        state: 'AZ',
+        cuisines: 'Coffee, Bakery',
+        pic: 'https://github.com/JesusMLares/Rest-Rant/blob/main/img/kitten2.jpg?raw=true'
       }]
       
       // Render index.jsx and passes 'places' objects

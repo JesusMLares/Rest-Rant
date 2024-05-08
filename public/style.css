@@ -18,6 +18,32 @@ h1 {
 
 h2 {
   text-align: left;
+<<<<<<< HEAD
+=======
+
+}
+
+p {
+  text-align: left;
+}
+
+img {
+  width: 45vw;
+}
+
+.place-rows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+.place-columns{
+  margin: 1em;
+  flex-grow: 1;
+>>>>>>> de8e90c8cf474345529324b840a7d16aab81d62a
 
 }
 
