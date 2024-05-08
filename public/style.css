@@ -1,32 +1,45 @@
 body{
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
+  font-family: Arial, sans-serif;
 }
-
 main{
-    width: 60vw;
-}
-
-div{
-    width: 100%;
+  
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 h1 {
-    align-self: center;
-    text-align: center;
-    color: cornflowerblue;
-  }
-
-h2{
-    color: red;
+  text-align: center;
+  color: cornflowerblue;
 }
 
+h2 {
+  text-align: left;
 
+}
 
-  
-img{
-    display: block;
-    width: 20vw;
-    height: 20vh;
+p {
+  text-align: left;
+}
+
+img {
+  width: 45vw;
+}
+
+.place-rows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+.place-columns{
+  margin: 1em;
+  flex-grow: 1;
+
 }
