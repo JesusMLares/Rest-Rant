@@ -1,5 +1,7 @@
 body {
   font-family: Arial, sans-serif;
+  background-color: rgb(55, 55, 55);
+  color: white;
 }
 main {
   margin: 0;
@@ -27,6 +29,42 @@ img {
   width: 45vw;
 }
 
+label{
+  display: inline-block;
+  width: 100px;
+  text-align: left;
+  margin-right: 109px;
+}
+
+input{
+  width: 200px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: rgb(55, 55, 55);
+  border-color: white;
+}
+
+.btn{
+  border-radius: 10%;
+  border-color: rgb(110, 177, 248);;
+  background-color: rgb(110, 177, 248);
+  color: black;
+  margin: 0 auto;
+  display: block;
+}
+
+.btn:hover {
+  border-color: black;
+  background-color: rgb(25, 59, 255);
+  cursor: -webkit-grab;
+}
+
+.form-columns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 .place-rows {
   display: flex;
