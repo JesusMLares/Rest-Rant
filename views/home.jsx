@@ -13,7 +13,7 @@ function home() {
           Photo by <a href="https://unsplash.com/photos/pink-beverage-on-glass-with-blackberries-and-pink-flower-on-top-sBDJADrnsbY">Alex Lvrs</a>
         </div>
         <a href="/places">
-          <button className="btn-primary">Places Page</button>
+          <button style={{borderRadius: '10%', backgroundColor: 'darkgrey', color: 'white'}}>Places Page</button>
         </a>
       </main>
     </Def>
