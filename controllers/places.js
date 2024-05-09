@@ -30,8 +30,10 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  res.redirect('/places')
+  console.log(req.body)
+  res.send('POST /places')
 })
+
 
 
 
