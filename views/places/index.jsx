@@ -7,8 +7,8 @@ function index (data, index) {
   let placesFormatted = data.places.map((place, index) => {
     return (
       <div key={index} className='places-columns'>
-        <h2>
-          <a href={`/places/${index}`}>{place.name}</a>
+        <h2 >
+          <a style={{ color: "#89CFF0"}} href={`/places/${index}`}>{place.name}</a>
         </h2>
         <p>
           {place.cuisines}

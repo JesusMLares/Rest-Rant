@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Brush Script MT", cursive;
   background-color: rgb(55, 55, 55);
   color: white;
 }
@@ -38,11 +38,17 @@ img {
   height: 40vh;
 }
 
+a {
+  color: white;
+  font-size: 1.5em;
+  text-decoration: none; /* Add this line to remove the link underline */
+}
+
 label{
   display: inline-block;
-  width: 100px;
+  width: 120px;
   text-align: left;
-  margin-right: 109px;
+  margin-right: 90px;
   color: white;
 }
 
@@ -66,6 +72,40 @@ input{
 .btn:hover {
   border-color: black;
   background-color: rgb(25, 59, 255);
+  cursor: -webkit-grab;
+}
+
+.edit-btn{
+  width: 2.5vw;
+  height: 2vh;
+  border-radius: 10%;
+  border-color: rgb(110, 177, 248);;
+  background-color: rgb(110, 177, 248);
+  color: black;
+  margin: 10px auto;
+  display: block;
+}
+
+.edit-btn:hover {
+  border-color: black;
+  background-color: rgb(46, 77, 251);
+  cursor: -webkit-grab;
+}
+
+.delete-btn{
+  width: 2.5vw;
+  height: 2vh;
+  border-radius: 10%;
+  border-color: rgb(55, 55, 55);
+  background-color: rgb(78, 78, 78);
+  color: black;
+  margin: 0 auto;
+  display: block;
+}
+
+.delete-btn:hover {
+  border-color: black;
+  background-color: rgb(140, 0, 0);
   cursor: -webkit-grab;
 }
 

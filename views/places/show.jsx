@@ -22,6 +22,18 @@ function show(data) {
           <h2 style={{ color: "#89CFF0", marginTop: "4em" }}>Comments</h2>
           <p>No comments yet!</p>
         </section>
+        <section>
+          <div>
+            <a href={`/places/${data.id}/edit`}>
+              <button className="edit-btn">Edit</button>
+            </a>
+            <form method="POST" action={`/places/${data.id}?_method=DELETE`}>
+              <button className="delete-btn"type="submit">
+                Delete
+              </button>
+            </form>
+          </div>
+        </section>
       </main>
     </Def>
   );
