@@ -3,7 +3,7 @@ const React = require("react");
 const Def = require("./default");
 
 //Create home page using default page
-function home() {
+function Home() {
   return (
     <Def>
       <main>
@@ -13,7 +13,7 @@ function home() {
           Photo by <a href="https://unsplash.com/photos/pink-beverage-on-glass-with-blackberries-and-pink-flower-on-top-sBDJADrnsbY">Alex Lvrs</a>
         </div>
         <a href="/places">
-          <button style={{borderRadius: '10%', backgroundColor: 'darkgrey', color: 'white'}}>Places Page</button>
+          <button className="btn">Places Page</button>
         </a>
       </main>
     </Def>
@@ -21,4 +21,4 @@ function home() {
 }
 
 // See index.js
-module.exports = home;
+module.exports = Home;

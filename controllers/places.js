@@ -26,11 +26,5 @@ router.post('/', (req, res) => {
   res.redirect('/places')
 })
 
-
-
-
-
-
-
 // See index.js
 module.exports = router
