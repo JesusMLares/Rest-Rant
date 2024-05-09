@@ -6,7 +6,7 @@ const Def = require('../default')
 function index (data, index) {
   let placesFormatted = data.places.map((place, index) => {
     return (
-      <div key={index} className='place-columns'>
+      <div key={index} className='places-columns'>
         <h2>
           <a href={`/places/${index}`}>{place.name}</a>
         </h2>
@@ -25,7 +25,7 @@ function index (data, index) {
     <Def>
         <main>
             <h1>Places to Rant or Rave About</h1>
-            <div className='place-rows'>
+            <div className='places-rows'>
               {placesFormatted}
             </div>
         </main>

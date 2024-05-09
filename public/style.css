@@ -15,14 +15,22 @@ main {
 h1 {
   text-align: center;
   color: cornflowerblue;
+  
 }
 
 h2 {
   text-align: left;
+  margin: 1px auto;
+}
+
+h3 {
+  text-align: left;
+  margin-top: 5px;
 }
 
 p {
   text-align: left;
+  margin: 1px auto;
 }
 
 img {
@@ -68,7 +76,7 @@ input{
   flex-direction: column;
 }
 
-.place-rows {
+.places-rows {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,9 +84,21 @@ input{
   flex-wrap: wrap;
 }
 
-.place-columns {
+.places-columns {
   margin: 1em;
   flex-grow: 1;
+}
+
+.place-rows{
+  display: flex;
+  flex-direction: row;
+}
+
+.place-columns{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 nav {
