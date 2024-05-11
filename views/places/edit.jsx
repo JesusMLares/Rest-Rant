@@ -1,42 +1,60 @@
-const React = require("react");
-const Def = require("../default");
+import React from "react";
+import Def from "../default";
 
-function new_form() {
+function edit_form(data) {
   return (
     <Def>
       <main>
         <h1>Edit this page</h1>
-        <form action="/places" method="post">
-          <div className="form-columns">
-            <label htmlFor="name">Place Name:</label>
-            <input id="name" name="name" required />
+        <form
+          method="POST"
+          action={`/places/${data.id}?_method=PUT`}
+          style={{ height: "30vh" }}
+        >
+          <div>
+            <label htmlFor="name">Place Name</label>
+            <input
+              id="name"
+              name="name"
+              defaultValue={data.place.name}
+              required
+            />
           </div>
-          <div className="form-columns">
-            <label htmlFor="pic">Place Picture:</label>
-            <input type="url" id="pic" name="pic" className="input"/>
+          <div>
+            <label htmlFor="city">City</label>
+            <input
+              id="city"
+              name="city"
+              defaultValue={data.place.city}
+            />
           </div>
-          <div className="form-columns">
-            <label htmlFor="city">City:</label>
-            <input id="city" name="city" />
+          <div>
+            <label htmlFor="state">State</label>
+            <input
+              id="state"
+              name="state"
+              defaultValue={data.place.state}
+              
+            />
           </div>
-          <div className="form-columns">
-            <label htmlFor="state">State:</label>
-            <input id="state" name="state" />
+          <div>
+            <label htmlFor="cuisines">Cuisines</label>
+            <input
+              id="cuisines"
+              name="cuisines"
+              defaultValue={data.place.cuisines}
+              required
+            />
           </div>
-          <div className="form-columns">
-            <label htmlFor="cuisines">Cuisines:</label>
-            <input id="cuisines" name="cuisines" />
+          <div>
+            <label htmlFor="pic">Picture</label>
+            <input id="pic" name="pic" defaultValue={data.place.pic} required />
           </div>
-          <input
-            type="submit"
-            value="Add Place"
-            className="btn"
-            required
-          />
+          <input type="submit" value="Add Place"/>
         </form>
       </main>
     </Def>
   );
 }
 
-module.exports = new_form;
+export default edit_form;
