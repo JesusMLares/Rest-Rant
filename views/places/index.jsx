@@ -3,12 +3,12 @@ const React = require('react');
 const Def = require('../default')
 
 //Create index page using default page
-function index (data, index) {
-  let placesFormatted = data.places.map((place, index) => {
+function index (data) {
+  let placesFormatted = data.places.map((place) => {
     return (
-      <div key={index} className='places-columns'>
+      <div key={place.id} className='places-columns'>
         <h2 >
-          <a style={{ color: "#89CFF0"}} href={`/places/${index}`}>{place.name}</a>
+          <a style={{ color: "#89CFF0"}} href={`/places/${place.id}`}>{place.name}</a>
         </h2>
         <p>
           {place.cuisines}

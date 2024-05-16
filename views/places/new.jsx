@@ -13,7 +13,7 @@ function new_form() {
           </div>
           <div className="form-columns">
             <label htmlFor="pic">Place Picture:</label>
-            <input type="url" id="pic" name="pic" className="input"/>
+            <input type="url" id="pic" name="pic" className="input" />
           </div>
           <div className="form-columns">
             <label htmlFor="city">City:</label>
@@ -27,12 +27,12 @@ function new_form() {
             <label htmlFor="cuisines">Cuisines:</label>
             <input id="cuisines" name="cuisines" />
           </div>
-          <input
-            type="submit"
-            value="Add Place"
-            className="btn"
-            required
-          />
+          <div className="form-columns">
+            <label htmlFor="founded">Founded Year</label>
+            <input className="form-control" id="founded" name="founded" />
+          </div>
+
+          <input type="submit" value="Add Place" className="btn" required />
         </form>
       </main>
     </Def>
