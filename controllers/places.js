@@ -26,11 +26,12 @@ router.post('/', (req, res) => {
   })
 })
 
-
+// NEW
 router.get('/new', (req, res) => {
   res.render('places/new')
 })
 
+// SHOW
 router.get('/:id', (req, res) => {
   db.Place.findById(req.params.id)
   .then(place => {
@@ -42,23 +43,27 @@ router.get('/:id', (req, res) => {
   })
 })
 
-
+// EDIT
 router.put('/:id', (req, res) => {
   res.send('PUT /places/:id stub')
 })
 
+// UPDATE
 router.delete('/:id', (req, res) => {
   res.send('DELETE /places/:id stub')
 })
 
+// 
 router.get('/:id/edit', (req, res) => {
   res.send('GET edit form stub')
 })
 
+// RANT
 router.post('/:id/rant', (req, res) => {
   res.send('GET /places/:id/rant stub')
 })
 
+// DELETE
 router.delete('/:id/rant/:rantId', (req, res) => {
     res.send('GET /places/:id/rant/:rantId stub')
 })

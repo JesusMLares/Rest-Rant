@@ -12,11 +12,14 @@ function show(data) {
             <h2 style={{ textAlign: "center", color: "#89CFF0" }}>Rating</h2>
             <h3 style={{ textAlign: "center" }}>Not Rated</h3>
             <h2 style={{ textAlign: "center", color: "#89CFF0" }}>Description</h2>
-            <p style={{ textAlign: "center" }}>
-              Located in {data.place.city}, {data.place.state} and serving{" "}
+            <h3 style={{ textAlign: "center" }}>{data.place.showEstablished()}</h3>
+          </div>
+        </div>
+        <div>
+        <p style={{ textAlign: "left" }}>
+              Located in {data.place.city}, {data.place.state} and serving
               {data.place.cuisines}
             </p>
-          </div>
         </div>
         <section>
           <h2 style={{ color: "#89CFF0", marginTop: "4em" }}>Comments</h2>

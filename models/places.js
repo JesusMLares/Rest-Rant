@@ -10,5 +10,9 @@ const placeSchema = new mongoose.Schema({
   founded: Number
 })
 
+placeSchema.methods.showEstablished = function(){
+  return `${this.name} has been serving ${this.city}, ${this.state} since ${this.founded}!`
+}
+
 // Place Model
 module.exports = mongoose.model('Place', placeSchema)
