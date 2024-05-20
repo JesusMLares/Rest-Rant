@@ -8,7 +8,7 @@ function index (data) {
     return (
       <div key={place.id} className='places-columns'>
         <h2 >
-          <a style={{ color: "#89CFF0"}} href={`/places/${place.id}`}>{place.name}</a>
+          <a style={{ color: "#132B34"}} href={`/places/${place.id}`}>{place.name}</a>
         </h2>
         <p>
           {place.cuisines}
