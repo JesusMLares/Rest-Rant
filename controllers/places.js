@@ -15,23 +15,33 @@ router.get("/", (req, res) => {
 
 // CREATE
 router.post("/", (req, res) => {
-  db.Place.create(req.body)
+  function remove(obj) {
+    const result = {};
+    for (const key in obj) {
+      if (obj[key] !== "") {
+        result[key] = obj[key];
+      }
+    }
+
+    return result;
+  }
+  console.log(req.body);
+  db.Place.create(remove(req.body))
     .then(() => {
       res.redirect("/places");
     })
     .catch((err) => {
-      if (err && err.name == 'ValidationError') {
-        let message = 'Validation Error: '
+      if (err && err.name == "ValidationError") {
+        let message = "Validation Error: ";
         for (var field in err.errors) {
-            message += `${field} was ${err.errors[field].value}. `
-            message += `${err.errors[field].message}`
+          message += `${field} was ${err.errors[field].value}. `;
+          message += `${err.errors[field].message}`;
         }
-        console.log('Validation error message', message)
-        res.render('places/new', { message })
-    }
-    else {
-        res.render('error404')
-    }
+        console.log("Validation error message", message);
+        res.render("places/new", { message });
+      } else {
+        res.render("error404");
+      }
     });
 });
 
