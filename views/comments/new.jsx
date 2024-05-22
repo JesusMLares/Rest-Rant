@@ -9,7 +9,7 @@ function new_Comment(data) {
         <form action="/comments" method="post">
           <div className="form-columns">
             <label htmlFor="author">Author</label>
-            <input id="author" name="author" required />
+            <input id="author" name="author" />
           </div>
           <div className="form-columns">
             <label htmlFor="rant">Rant?</label>
@@ -21,7 +21,7 @@ function new_Comment(data) {
           </div>
           <div className="form-columns">
             <label htmlFor="content">Content</label>
-            <input id="content" name="content" required />
+            <input id="content" name="content" />
           </div>
           <input type="submit" value="Add Comment" className="btn" />
         </form>
