@@ -25,7 +25,6 @@ router.post("/", (req, res) => {
 
     return result;
   }
-  console.log(req.body);
   db.Place.create(remove(req.body))
     .then(() => {
       res.redirect("/places");
@@ -78,11 +77,39 @@ router.get("/:id/edit", (req, res) => {
   res.send("GET edit form stub");
 });
 
-// RANT
+// NEW RANT
 router.get("/:id/comment", (req, res) => {
-  console.log("req.params.id", req.params.id);
-  res.render("comments/new")
+  db.Place.findById(req.params.id)
+    .populate('comments')
+    .then((place) => {
+      res.render("comments/new", { place });
+    })
+    .catch((err) => {
+      console.log("err", err);
+      res.render("error404");
+    });
 });
+
+router.put("/:id/comment", async (req, res) => {
+  // Get the place
+  let place = await db.Place.findById(req.params.id)
+
+  // Create comment using form data
+  let comment = await db.Comment.create({
+    author: req.body.author,
+    rant: req.body.rant === 'true',
+    stars: req.body.stars,
+    content: req.body.content
+  })
+
+  // Add that comment to the place's comment array
+  place.comments.push(comment.id)
+
+  // Save the place
+  await place.save()
+
+  res.redirect(`/places/${req.params.id}`)
+})
 
 // DELETE
 router.delete("/:id/rant/:rantId", (req, res) => {

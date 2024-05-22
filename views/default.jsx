@@ -21,10 +21,7 @@ function Def(html) {
             </li>
             <li>
               <a href="/places/new">Add Place</a>
-            </li>
-            <li>
-              <a href="/comments/new">Comment</a>
-            </li>
+            </li> 
           </ul>
         </nav>
         {html.children}

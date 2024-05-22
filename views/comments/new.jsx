@@ -1,19 +1,23 @@
 const React = require("react");
 const Def = require("../default");
 
-function new_Comment({place}) {
+function new_Comment(data) {
   return (
     <Def>
       <main>
-        <h1>Add a New Comment</h1>
-        <form action="/comments" method="post">
+        <h1>Add a New Comment to: {data.place.name}</h1>
+        <form
+          method="POST"
+          action={`/places/${data.place.id}/comment?_method=PUT`}
+          style={{ height: "30vh" }}
+        >
           <div className="form-columns">
             <label htmlFor="author">Author</label>
             <input id="author" name="author" />
           </div>
           <div className="form-columns">
             <label htmlFor="rant">Rant?</label>
-            <input id="rant" name="rant" type="checkbox" />
+            <input id="rant" name="rant" type="checkbox" value = 'true' />
           </div>
           <div className="form-columns">
             <label htmlFor="stars">Stars</label>
