@@ -1,7 +1,7 @@
 const React = require("react");
 const Def = require("../default");
 
-function new_Comment(data) {
+function new_Comment({place}) {
   return (
     <Def>
       <main>

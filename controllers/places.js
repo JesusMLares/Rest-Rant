@@ -45,12 +45,12 @@ router.post("/", (req, res) => {
     });
 });
 
-// NEW
+// NEW PLACE PAGE
 router.get("/new", (req, res) => {
   res.render("places/new");
 });
 
-// SHOW
+// SHOW PLACE PAGE
 router.get("/:id", (req, res) => {
   db.Place.findById(req.params.id)
     .populate('comments')
@@ -79,8 +79,9 @@ router.get("/:id/edit", (req, res) => {
 });
 
 // RANT
-router.post("/:id/rant", (req, res) => {
-  res.send("GET /places/:id/rant stub");
+router.get("/:id/comment", (req, res) => {
+  console.log("req.params.id", req.params.id);
+  res.render("comments/new")
 });
 
 // DELETE

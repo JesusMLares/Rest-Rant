@@ -47,10 +47,13 @@ function show(data) {
         </section>
         <section>
           <div>
-            <a href={`/places/${data.id}/edit`}>
+            <a href={`/places/${data.place.id}/comment`}>
+              <button>Make Comment</button>
+            </a>
+            <a href={`/places/${data.place.id}/edit`}>
               <button className="edit-btn">Edit</button>
             </a>
-            <form method="POST" action={`/places/${data.id}?_method=DELETE`}>
+            <form method="POST" action={`/places/${data.place.id}?_method=DELETE`}>
               <button className="delete-btn"type="submit">
                 Delete
               </button>
