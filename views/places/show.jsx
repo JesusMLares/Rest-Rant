@@ -2,6 +2,26 @@ const React = require("react");
 const Def = require("../default");
 
 function show(data) {
+  let comments = (
+    <h3>
+      No comments yet!
+    </h3>
+  )
+  if(data.place.comments.length){
+    comments = data.place.comments.map((c, index) => {
+      return (
+        <div key={index} style={{ border: "1px solid white", padding: "10px" }}>
+          <h2>{c.rant ? 'Rant! :(' : 'Rave! <3'}</h2>
+          <h4>{c.content}</h4>
+          <h3>
+        <strong>- {c.author}</strong>
+          </h3>
+          <h4>Rating: {c.stars}</h4>
+        </div>
+      )
+    })
+  }
+
   return (
     <Def>
       <main style={{ marginTop: "2em" }}>
@@ -23,7 +43,7 @@ function show(data) {
         </div>
         <section>
           <h2 style={{ color: "#89CFF0", marginTop: "4em" }}>Comments</h2>
-          <p>No comments yet!</p>
+          <p>{comments}</p>
         </section>
         <section>
           <div>
