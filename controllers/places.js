@@ -87,7 +87,7 @@ router.delete('/:id', (req, res) => {
 })
 
 
-//
+// Edit Place
 router.get("/:id/edit", (req, res) => {
   res.send("GET edit form stub");
 });
