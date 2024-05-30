@@ -8,7 +8,7 @@ function edit_form(data) {
         <h1>Edit this page</h1>
         <form
           method="POST"
-          action={`/places/${data.id}?_method=PUT`}
+          action={`/places/${data.place.id}?_method=PUT`}
           style={{ height: "30vh" }}
         >
           <div>
@@ -22,20 +22,11 @@ function edit_form(data) {
           </div>
           <div>
             <label htmlFor="city">City</label>
-            <input
-              id="city"
-              name="city"
-              defaultValue={data.place.city}
-            />
+            <input id="city" name="city" defaultValue={data.place.city} />
           </div>
           <div>
             <label htmlFor="state">State</label>
-            <input
-              id="state"
-              name="state"
-              defaultValue={data.place.state}
-              
-            />
+            <input id="state" name="state" defaultValue={data.place.state} />
           </div>
           <div>
             <label htmlFor="cuisines">Cuisines</label>
@@ -50,7 +41,16 @@ function edit_form(data) {
             <label htmlFor="pic">Picture</label>
             <input id="pic" name="pic" defaultValue={data.place.pic} required />
           </div>
-          <input type="submit" value="Add Place"/>
+          <div>
+            <label htmlFor="founded">Founded</label>
+            <input
+              id="founded"
+              name="founded"
+              defaultValue={data.place.founded}
+              required
+            />
+          </div>
+          <input type="submit" value="Edit Place" />
         </form>
       </main>
     </Def>

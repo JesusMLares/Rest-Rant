@@ -62,7 +62,7 @@ router.get("/:id", (req, res) => {
     });
 });
 
-// EDIT
+// EDIT Page
 router.get('/:id/edit', (req, res) => {
   db.Place.findById(req.params.id)
   .then(place => {
@@ -72,6 +72,32 @@ router.get('/:id/edit', (req, res) => {
       res.render('error404')
   })
 })
+
+// Edit Place
+// GET edit form
+router.get("/:id/edit", (req, res) => {
+  db.Place.findById(req.params.id)
+    .then((place) => {
+      res.render("places/edit", { place });
+    })
+    .catch((err) => {
+      console.log("err", err);
+      res.render("error404");
+    });
+});
+
+// PUT PLACE
+router.put("/:id", (req, res) => {
+  db.Place.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    .then((place) => {
+      res.redirect(`/places/${place.id}`);
+    })
+    .catch((err) => {
+      console.log("err", err);
+      res.render("error404");
+    });
+});
+
 
 
 // Delete
@@ -87,48 +113,45 @@ router.delete('/:id', (req, res) => {
 })
 
 
-// Edit Place
-router.get("/:id/edit", (req, res) => {
-  res.send("GET edit form stub");
-});
 
-// NEW RANT
-router.get("/:id/comment", (req, res) => {
-  db.Place.findById(req.params.id)
-    .populate('comments')
-    .then((place) => {
-      res.render("comments/new", { place });
-    })
-    .catch((err) => {
-      console.log("err", err);
-      res.render("error404");
-    });
-});
 
-router.put("/:id/comment", async (req, res) => {
-  // Get the place
-  let place = await db.Place.findById(req.params.id)
+// // NEW RANT
+// router.get("/:id/comment", (req, res) => {
+//   db.Place.findById(req.params.id)
+//     .populate('comments')
+//     .then((place) => {
+//       res.render("comments/new", { place });
+//     })
+//     .catch((err) => {
+//       console.log("err", err);
+//       res.render("error404");
+//     });
+// });
 
-  // Create comment using form data
-  let comment = await db.Comment.create({
-    author: req.body.author,
-    rant: req.body.rant === 'true',
-    stars: req.body.stars,
-    content: req.body.content
-  })
+// router.put("/:id/comment", async (req, res) => {
+//   // Get the place
+//   let place = await db.Place.findById(req.params.id)
 
-  // Add that comment to the place's comment array
-  place.comments.push(comment.id)
+//   // Create comment using form data
+//   let comment = await db.Comment.create({
+//     author: req.body.author,
+//     rant: req.body.rant === 'true',
+//     stars: req.body.stars,
+//     content: req.body.content
+//   })
 
-  // Save the place
-  await place.save()
+//   // Add that comment to the place's comment array
+//   place.comments.push(comment.id)
 
-  res.redirect(`/places/${req.params.id}`)
-})
+//   // Save the place
+//   await place.save()
 
-// DELETE
-router.delete("/:id/rant/:rantId", (req, res) => {
-  res.send("GET /places/:id/rant/:rantId stub");
-});
+//   res.redirect(`/places/${req.params.id}`)
+// })
+
+// // DELETE
+// router.delete("/:id/rant/:rantId", (req, res) => {
+//   res.send("GET /places/:id/rant/:rantId stub");
+// });
 
 module.exports = router;
